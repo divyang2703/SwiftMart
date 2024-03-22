@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Cards = ({ contents }) => {
     const [sortedProducts, setSortedProducts] = useState([...contents.products]);
-    // console.log([...contents.products])
     const [search, setSearch] = useState("");
 
     const onHandleAscending = () => {
@@ -17,6 +16,15 @@ const Cards = ({ contents }) => {
         const sorted = [...sortedProducts].sort((a, b) => b.price - a.price);
         setSortedProducts(sorted);
     };
+
+    const onHandleChange = (e) =>{
+        let selection = e.target.value
+        if(selection === "Ascending"){
+            onHandleAscending();
+        }else{
+            onHandleDescending();
+        }
+    }
 
     const handleSearch = () => {
         const filtered = contents.products.filter(product =>
@@ -36,12 +44,20 @@ const Cards = ({ contents }) => {
                         className='border border-black w-auto p-2 lg:w-[500px]'
                         onChange={(e) => setSearch(e.target.value)}
                     />
-                    <FaSearch className='ml-2 bord' onClick={handleSearch} size={30} />
+                    <FaSearch className='ml-2' onClick={handleSearch} size={30} />
+                    <select onChange={onHandleChange} className='border p-2 ml-32 mt-2 '>
+                        <option value="Select">Select your options</option>
+                        <option value="Ascending">Ascending</option>
+                        <option value="Descending">Descending</option>
+                    </select>
                 </div>
-                <button style={{ marginRight: '10px' }} onClick={onHandleAscending} className='ml-[38rem] p-2 border mt-2'>Ascending</button>
-                <button onClick={onHandleDescending} className=' p-2 border mt-2'>Descending</button>
+                    {/* <select onChange={onHandleChange} className='flex justify-center border p-2 ml-10 mt-10'>
+                        <option value="Select">Select your options</option>
+                        <option value="Ascending">Ascending</option>
+                        <option value="Descending">Descending</option>
+                    </select> */}
             </div>
-            <div className="card-container">
+            <div className="card-container mt-10">
                 {sortedProducts.map((product, index) => (
                     <div key={index} className="card">
                         <Link to ={`/product_details/${product.id}`}><img src={product.images[0]} alt={product.title} style={{ width: '100%' }} /></Link>

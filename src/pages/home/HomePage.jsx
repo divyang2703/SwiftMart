@@ -6,7 +6,7 @@ import heroImage from "../../components/assets/heroimage.png";
 const HomePage = () => {
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-center py-2 text-4xl lg:text-5xl">MYSTI CART</h1>
+      <h1 className="text-center py-2 text-4xl lg:text-5xl">Swift Mart</h1>
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-2 mt-5">
         <img src={heroImage} alt="hero image" className="border mt-10 mx-auto lg:mt-0 lg:ml-20 h-[300px] w-full lg:w-auto lg:h-[400px]" />
         <div className="lg:ml-10 lg:mr-20">

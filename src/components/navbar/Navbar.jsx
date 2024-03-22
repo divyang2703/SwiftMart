@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-black'>
       <Link to='/'>
-        <h1 className='w-full text-3xl font-bold text-black'>Mysti Cart</h1>
+        <h1 className='w-full text-3xl font-bold text-black'>Swift Mart</h1>
       </Link>
 
     <ul className='hidden md:flex'>
@@ -40,7 +40,7 @@ const Navbar = () => {
     </div>
     <div className={nav ? 'fixed left-0 top-0 w-[70%] border-r h-full border-r-gray-900 bg-white ease-in-out duration-500' : 'fixed left-[-100%]'}>
       <Link to='/'>
-      <h1 className='w-full text-3xl font-bold text-black m-4'>Mysti Cart</h1>
+      <h1 className='w-full text-3xl font-bold text-black m-4'>Swift Mart</h1>
       </Link>
       <ul className='p-4 uppercase'>
         <Link to='/'>

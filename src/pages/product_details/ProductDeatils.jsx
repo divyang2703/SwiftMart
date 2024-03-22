@@ -6,8 +6,6 @@ import { useParams } from 'react-router-dom';
 
 const ProductDetails = ({ contents }) => {
   const { id } = useParams();
-  console.log(contents)
-  console.log(id)
 
   if (!contents) {
     return <div>Loading...</div>;
@@ -21,7 +19,7 @@ const ProductDetails = ({ contents }) => {
 
   return (
     <div className="card1">
-      <img src={product.images[0]} alt={product.title} style={{ width: '80%' }} />
+      <img src={product.images[0]} alt={product.title} />
       <h2>{product.title}</h2>
       <p>{product.description}</p>
       <Rating rating={product.rating} />

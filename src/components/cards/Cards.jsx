@@ -51,11 +51,6 @@ const Cards = ({ contents }) => {
                         <option value="Descending">Descending</option>
                     </select>
                 </div>
-                    {/* <select onChange={onHandleChange} className='flex justify-center border p-2 ml-10 mt-10'>
-                        <option value="Select">Select your options</option>
-                        <option value="Ascending">Ascending</option>
-                        <option value="Descending">Descending</option>
-                    </select> */}
             </div>
             <div className="card-container mt-10">
                 {sortedProducts.map((product, index) => (

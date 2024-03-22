@@ -2,7 +2,7 @@ import React from 'react';
 // import './'
 
 const Rating = ({ rating }) => {
-  return <div>{rating}</div>;
+  return <div className='p-2 text-xl'>Ratings: {rating}</div>;
 };
 
 export default Rating;

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-// import useFetch from "react-fetch-hook";
 
 //pages import
 import HomePage from "./pages/home/HomePage";
@@ -22,7 +21,6 @@ function App() {
     try {
       fetch(process.env.REACT_APP_URI + "/api").then((response)=> response.json()).then((data)=>{
         setProducts(data)
-        console.log(data); 
       })
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -40,7 +38,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path='/products' element={<Cards content={data}/>}/> */}
         <Route path="/products/" element={<ProductPage content={products} />} />
         <Route
           path="/product_details/:id"

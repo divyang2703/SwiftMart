@@ -11,6 +11,7 @@
   .price1 {
     color: grey;
     font-size: 22px;
+    padding: 10px;
   }
   
   .card1 button {
@@ -39,7 +40,9 @@
 }
 
 .card1 img {
-    max-width:  190px;
+  margin: 40px;
+    width: 80%;
     height: 200px;
+    padding: 20px;
     object-fit: contain;
 }
